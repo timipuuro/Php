@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f4;
+}
+
+/* YLÄPALKKI */
+
+header {
+    background: #222;
+    color: white;
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.kori {
+    text-align: right;
+}
+
+.ilmainen {
+    color: lightgreen;
+    font-weight: bold;
+}
+
+/* TUOTELISTA */
+
+.tuotteet {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.kortti {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.hinta {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* KATEGORIAT */
+
+.tag {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.tag-kirja {
+    background: royalblue;
+}
+
+.tag-elektroniikka {
+    background: seagreen;
+}
+
+.tag-vaate {
+    background: tomato;
+}
+
+/* NAPPI */
+
+button {
+    background: #222;
+    color: white;
+    border: none;
+
+    padding: 10px 15px;
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #444;
+}
+
+/* FOOTER */
+
+footer {
+    text-align: center;
+    padding: 20px;
+}
