@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang="fi">
+<html lang="fi" >
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omat Nettisivut</title>
@@ -39,34 +40,33 @@
 
 
 <header id="etusivu">
-    <h1 class="display-4">Hei, Olen Kasper Suominen</h1>
-    <p class="lead">Tuleva Ohjelmistokehittäjä</p>
-
-    <a href="#yhteys" class="btn btn-light btn-lg mt-3">
-        Ota yhteyttä
-    </a>
+    <h1 class="display-4"><div class="split-text-container">
+    <span class="text-part left">Kasper </span>
+    <span class="text-part right"> Suominen</span>
+</div>
+</h1>
+    <p class="lead" style="color: white ">Tuleva Ohjelmistokehittäjä</p>
 </header>
 
 
 
-<section id="minusta">
+<section id="minusta" class="minusta">
     <div class="container">
 
-        <h2 class="text-center mb-5">Tietoa minusta</h2>
+        <h2 class="text-center mb-5" style="color: white;">Tietoa minusta</h2>
 
         <div class="row">
 
             <div class="col-md-6">
                 <h3>Esittely</h3>
                 <p>
-                    Olen tieto- ja viestintätekniikan opiskelija.
-                    Etsin harjoittelupaikkaa ensi syksylle ja olen eritysen kiinnostunut ohjelmoinnista sekä
-                    web-kehityksestä.
+                    Olen suorittamassa ohjelmistokehittäjän kaksoistutkintoa. Minulla on vahva kiinnostus ohjelmointiin sekä web-kehitykseen. 
+                  
                 </p>
 
                 <h3>Harrastukset</h3>
                 <ul>
-                    <li>Koodaus</li>
+                    <li>Lenkeily</li>
                     <li>Pelaaminen</li>
                     <li>Kuntosali</li>
                 </ul>
@@ -82,7 +82,7 @@
                 <h3>Koulutus</h3>
 
                 <!-- TAULUKKO -->
-                <table class="table table-striped">
+                <table class="table table-striped" data-bs-theme="dark">
                     <thead>
                         <tr>
                             <th>Vuosi</th>
@@ -91,7 +91,7 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>2025-</td>
+                            <td>2025-Kesken</td>
                             <td>Ohjelmistokehittäjä kaksoistutkinto</td>
                         </tr>
                         
@@ -114,10 +114,10 @@
 </section>
 
 
-<section class="bg-light">
+<section class="dif">
     <div class="container">
 
-        <h2 class="text-center mb-5">Työnäytteet</h2>
+        <h2 class="text-center mb-5" >Työnäytteet</h2>
 
         <div class="row g-4">
 
@@ -126,40 +126,50 @@
                     <div class="card-body">
                         <h5 class="card-title">PHP</h5>
                         <p class="card-text">
-                            PHP työt.
+                            Enimmät minun tekemistä PHP projekteista löytyy githubista. Tämä sivu lukuun ottaen.
                         </p>
+                        
+                    </div>
+                     <div class="card-footer"> 
                         <a href="https://github.com/timipuuro/Php" class="btn btn-primary">
                             Katso projekti
                         </a>
+</div>
+                </div>
+            </div>
+
+         
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body" style="height: 300px;" >
+                        <h5 class="card-title">Kysely HTML</h5>
+                        <p class="card-text">
+                            Enimmät minun tekemistä HTML projekteista löytyy githubista.
+                        </p>
+                       
                     </div>
+                     <div class="card-footer">
+ <a href="auditointi.html" class="btn btn-primary">
+    Katso projekti
+     </a>
+                            </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Projektityö </h5>
+                    <div class="card-body" style="height: 300px;" >
+                        <h5 class="card-title">HTML</h5>
                         <p class="card-text">
-                            Lämpö
+                            Enimmät minun tekemistä HTML projekteista löytyy githubista.
                         </p>
-                        <a href="lämpötila.html" class="btn btn-primary">
-                            Katso projekti
-                        </a>
+                       
                     </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body">
-                        <h5 class="card-title">Html</h5>
-                        <p class="card-text">
-                            Html teokset github
-                        </p>
-                        <a href="https://github.com/timipuuro/HTML/tree/main" class="btn btn-primary">
-                            Katso projekti
-                        </a>
-                    </div>
+                     <div class="card-footer">
+ <a href="https://github.com/timipuuro/HTML/tree/main" class="btn btn-primary">
+    Katso projekti
+     </a>
+                            </div>
                 </div>
             </div>
 
@@ -170,7 +180,7 @@
 
 
 <!-- YHTEYDENOTTOLOMAKE -->
-<section id="yhteys" class="bg-light">
+<section id="yhteys" class="minusta">
     <div class="container">
 
         <h2 class="text-center mb-5">Ota yhteyttä</h2>
@@ -179,18 +189,18 @@
         <form action="mailto:kassu.suominen@gmail.com" method="post" enctype="text/plain">
 
             <div class="mb-3">
-                <label class="form-label">Nimi</label>
-                <input type="text" class="form-control" name="nimi" required>
+                <label class="form-label" style="color: #99A1AD;">Nimi</label >
+                <input type="text" class="form-control" name="nimi" required style=" background-color: #1D202A;color: #f7eeee;">
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Sähköposti</label>
-                <input type="email" class="form-control" name="email" required>
+                <label class="form-label" style="color: #99A1AD;">Sähköposti</label >
+                <input type="email" class="form-control" name="email" required style=" background-color: #1D202A;color: #f7eeee;">
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Viesti</label>
-                <textarea class="form-control" rows="5" name="viesti"></textarea>
+                <label class="form-label" style="color: #99A1AD;">Viesti</label >
+                <textarea class="form-control" rows="5" name="viesti" style=" background-color: #1D202A; color: #f7eeee;"></textarea>
             </div>
 
             <button type="submit" class="btn btn-primary">

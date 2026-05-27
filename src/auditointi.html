@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arviointilomake</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .audit-card {
+            max-width: 700px;
+            margin: 40px auto;
+            border-radius: 15px;
+        }
+
+        .result-box {
+            font-size: 1.3rem;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card shadow audit-card">
+        <div class="card-body">
+
+            <h1 class="text-center mb-4">Arviointilomake</h1>
+
+            <form id="auditForm">
+
+                <!-- 9 arvioitavaa kohtaa -->
+                <div class="mb-3">
+                    <label class="form-label">1. Sivuston ulkoasu</label>
+                    <select class="form-select score">
+                        <option value="0">0 </option>
+                        <option value="1">1</option>
+                        <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                       
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">2. Navigointi</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">3. Responsiivisuus</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">4. Värit ja kontrasti</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">5. Sisällön selkeys</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">6. Kuvien laatu</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">7. Lomakkeiden toimivuus</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">8. Nopeus</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">9. Käytettävyys</label>
+                    <select class="form-select score">
+                        <option value="0">0</option>
+                        <option value="1">1</option>
+                          <option value="2">2 </option>
+                        <option value="3">3 </option>
+                        <option value="4">4 </option>
+                        <option value="5">5 </option>
+                    </select>
+                </div>
+
+                <div class="d-grid">
+                    <button type="button" class="btn btn-primary btn-lg" onclick="laskePisteet()">
+                        anna arvio
+                    </button>
+                </div>
+
+            </form>
+
+            <div id="tulos" class="result-box d-none"></div>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    function laskePisteet() {
+
+        let pisteet = document.querySelectorAll(".score");
+        let summa = 0;
+
+        pisteet.forEach(function(valinta) {
+            summa += Number(valinta.value);
+        });
+
+        let tulos = document.getElementById("tulos");
+
+        tulos.classList.remove("d-none", "bg-danger", "bg-warning", "bg-success", "text-white");
+
+        let arvio = "";
+
+        if (summa < 10) {
+            arvio = "Huono";
+            tulos.classList.add("bg-danger", "text-white");
+        }
+        else if (summa <= 22) {
+            arvio = "Kohtalainen";
+            tulos.classList.add("bg-warning");
+        }
+        else {
+            arvio = "Hyvä";
+            tulos.classList.add("bg-success", "text-white");
+        }
+
+        tulos.innerHTML = `
+            Kokonaispisteet: ${summa}/45 <br>
+            Arvio: ${arvio}
+        `;
+    }
+</script>
+
+</body>
+</html>
