@@ -28,7 +28,7 @@
                     <a class="nav-link" href="#etusivu">Etusivu</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#minusta">Tietoa minusta</a>
+                    <a class="nav-link" href="#idf">Työnäytteet</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#yhteys">Ota yhteyttä</a>
@@ -60,7 +60,7 @@
             <div class="col-md-6">
                 <h3>Esittely</h3>
                 <p>
-                    Olen suorittamassa ohjelmistokehittäjän kaksoistutkintoa. Minulla on vahva kiinnostus ohjelmointiin sekä web-kehitykseen. 
+               Minulla on vahva kiinnostus ohjelmointiin sekä teknologiaan, ja olen innokas oppimaan uusia taitoja alalla. Olen motivoitunut ja ahkera opiskelija, joka pyrkii jatkuvasti kehittämään itseään.
                   
                 </p>
 
@@ -114,7 +114,7 @@
 </section>
 
 
-<section class="dif">
+<section class="dif" id="idf">
     <div class="container">
 
         <h2 class="text-center mb-5" >Työnäytteet</h2>
@@ -137,26 +137,7 @@
 </div>
                 </div>
             </div>
-
-         
-            <div class="col-md-4">
-                <div class="card h-100">
-                    <div class="card-body" style="height: 300px;" >
-                        <h5 class="card-title">Kysely HTML</h5>
-                        <p class="card-text">
-                            Enimmät minun tekemistä HTML projekteista löytyy githubista.
-                        </p>
-                       
-                    </div>
-                     <div class="card-footer">
- <a href="auditointi.html" class="btn btn-primary">
-    Katso projekti
-     </a>
-                            </div>
-                </div>
-            </div>
-
-            <div class="col-md-4">
+   <div class="col-md-4">
                 <div class="card h-100">
                     <div class="card-body" style="height: 300px;" >
                         <h5 class="card-title">HTML</h5>
@@ -173,6 +154,25 @@
                 </div>
             </div>
 
+         
+            <div class="col-md-4">
+                <div class="card h-100">
+                    <div class="card-body" style="height: 300px;" >
+                        <h5 class="card-title">Arvionti HTML</h5>
+                        <p class="card-text">
+                            Minun luoma lyhyt arviontilomake HTML:llä.
+                        </p>
+                       
+                    </div>
+                     <div class="card-footer">
+ <a href="auditointi.html" class="btn btn-primary">
+    Katso projekti
+     </a>
+                            </div>
+                </div>
+            </div>
+
+         
         </div>
     </div>
 </section>
